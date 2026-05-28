@@ -11,7 +11,6 @@ public class StudentMapper {
             return null;
         }
         return StudentDTO.builder()
-                .id(entity.getId())
                 .fullName(entity.getFullName())
                 .email(entity.getEmail())
                 .gpa(entity.getGpa())
@@ -23,7 +22,6 @@ public class StudentMapper {
             return null;
         }
         return Student.builder()
-                .id(dto.getId())
                 .fullName(dto.getFullName())
                 .email(dto.getEmail())
                 .gpa(dto.getGpa())
@@ -34,9 +32,7 @@ public class StudentMapper {
         if (dto == null || entity == null) {
             return;
         }
-        if (dto.getId() != null) {
-            entity.setId(dto.getId());
-        }
+
         entity.setFullName(dto.getFullName());
         entity.setEmail(dto.getEmail());
         entity.setGpa(dto.getGpa());

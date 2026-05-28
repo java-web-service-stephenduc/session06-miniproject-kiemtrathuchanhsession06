@@ -9,7 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class StudentDTO {
-    private Long id;
     private String fullName;
     private String email;
     private Double gpa;
